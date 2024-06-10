@@ -1,0 +1,165 @@
+/* body{
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to top, #d9f8dd, #799880);
+} */
+
+body{
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to top, #e2ffb8, #ffffff);
+}
+
+html {
+    cursor: url(media/cursor/sew.png), auto;
+}
+
+button, a, input, select, textarea {
+    cursor: url('media/cursor/sew.png'), auto;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+h1{
+    font-family: 'acharmingfont';
+    text-align: center;
+    font-size: 110px;
+    font-weight: 100;
+    text-shadow: 10px 10px 4px rgba(0, 0, 0, 0.4);
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+h2{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+h3{
+    position: absolute;
+    font-style: italic;
+    font-weight: 100;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#quiz-image{
+    height: 460px;
+}
+
+.answer-btn{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(62, 255, 249);
+    padding: 10px;
+    margin: 10px auto;
+    font-size: 18px;
+}
+
+#answers-container{
+    margin-top: 50px;
+}
+
+.answer-btn:hover{
+    background-color: rgb(63, 162, 255);
+}
+
+#result-container{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+/*-------------------------------------------------FOND-------------------------------------------------------------------------*/
+
+
+
+.ceintre{
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    z-index: -1;
+}
+
+.ceintre img{
+    width: 600px;
+}
+
+.bobine{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bobine img{
+    width: 350px;
+}
+
+.tee{
+    position: absolute;
+    bottom: 60px;
+    left: 100px;
+    z-index: -1;
+    transform: rotate(-10deg);
+}
+
+.tee img{
+    width: 400px;
+}
+
+.smoke{
+    position: absolute;
+    top: 0;
+    left: 200px;
+    z-index: -1;
+}
+
+.smoke img{
+    height: 80vh;
+}
+
+
+.bandeau{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.bandeau img{
+    width: 400px;
+}
+
+.tape{
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    z-index: -1;
+}
+
+.tape img{
+    width: 400px;
+}
