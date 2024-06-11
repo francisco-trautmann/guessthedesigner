@@ -4,6 +4,11 @@
     background: linear-gradient(to top, #d9f8dd, #799880);
 } */
 
+@font-face{
+    font-family: 'acharmingfont';
+    src: url(fonts/Achafont.woff2)format('woff2');
+}
+
 body{
     margin: 0;
     height: 100vh;
