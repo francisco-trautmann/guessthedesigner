@@ -26,7 +26,7 @@ button, a, input, select, textarea {
 h1{
     font-family: 'acharmingfont';
     text-align: center;
-    font-size: 250px;
+    font-size: 180px;
     font-weight: 100;
     text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
     margin: 0;
@@ -70,7 +70,7 @@ h3{
     font-weight: 100;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 15px;
+    font-size: 10px;
 }
 
 
@@ -80,13 +80,13 @@ h3{
 
 .ceintre{
     position: absolute;
-    top: 60px;
+    top: 80px;
     right: 60px;
     z-index: -1;
 }
 
 .ceintre img{
-    width: 600px;
+    width: 500px;
 }
 
 .bobine{
@@ -97,7 +97,7 @@ h3{
 }
 
 .bobine img{
-    width: 350px;
+    width: 300px;
 }
 
 .tee{
@@ -109,12 +109,12 @@ h3{
 }
 
 .tee img{
-    width: 400px;
+    width: 350px;
 }
 
 .smoke{
     position: absolute;
-    top: 0;
+    top: 80px;
     left: 200px;
     z-index: -1;
 }
@@ -132,7 +132,7 @@ h3{
 }
 
 .bandeau img{
-    width: 400px;
+    width: 300px;
 }
 
 .tape{
@@ -143,8 +143,12 @@ h3{
 }
 
 .tape img{
-    width: 400px;
+    width: 300px;
 }
+
+
+
+/*--------------------------------------------------------MEDIA-------------------------------------------------------------*/
 
 
 
@@ -152,7 +156,7 @@ h3{
 
     h1{
 
-        font-size: 200px;
+        font-size: 180px;
 
     }
 
@@ -164,6 +168,44 @@ h3{
 
         font-size: 150px;
 
+    }
+
+}
+
+@media (max-width:800px){
+
+    h1{
+
+        font-size: 100px;
+
+    }
+
+    .play{
+        font-size: 100px;
+    }
+    
+    .bandeau img{
+        display: none;
+    }
+
+    .tee img{
+        display: none;
+    }
+
+    .bobine img{
+        display: none;
+    }
+
+    .ceintre img{
+        display: none;
+    }
+
+    .tape{
+        display: none;
+    }
+
+    .smoke{
+        display: none;
     }
 
 }
