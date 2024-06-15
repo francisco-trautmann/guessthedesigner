@@ -194,14 +194,21 @@ h3{
         font-size: 60px;
     }
 
+    .answer-btn{
+        width: 50%;
+    }
+
+    #answers-container{
+        margin-bottom: 50px;
+    }
+
 
     .play{
         font-size: 100px;
     }
 
     #score-container{
-        font-size: 15px;
-        padding: 10px;
+        display: none;
     }
 
     #quiz-image{
