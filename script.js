@@ -299,11 +299,26 @@ const quizData = [
         answers: ["Kenzo", "Jacquemus", "Chanel", "Casablanca"],
         correct: 2,
         description: "Chanel - Spring 2017"
+    },
+    {
+        image: "media/images/51.jpeg",
+        answers: ["Gucci", "Prada", "Raf Simons", "Dior Homme"],
+        correct: 3,
+        description: "Dior Homme by Hedi Slimane - Spring/Summer 2002"
+    },
+    {
+        image: "media/images/52.jpg",
+        answers: ["Prada", "Loewe", "Chanel", "Marc Jacobs"],
+        correct: 0,
+        description: "Prada - Fall 2015"
     }
 
 ];
 
+
 let currentQuestion = 0;
+let score = 0;
+let askedQuestions = [];
 
 document.addEventListener("DOMContentLoaded", () => {
     shuffleArray(quizData);
@@ -318,6 +333,16 @@ function shuffleArray(array) {
 }
 
 function loadQuestion() {
+    if (askedQuestions.length === quizData.length) {
+        askedQuestions = []; // Réinitialise la liste des questions posées
+    }
+
+    do {
+        currentQuestion = Math.floor(Math.random() * quizData.length);
+    } while (askedQuestions.includes(currentQuestion));
+
+    askedQuestions.push(currentQuestion); // Ajoute la question actuelle à la liste des questions posées
+
     const question = quizData[currentQuestion];
     const imgElement = document.getElementById("quiz-image");
     const answerButtons = document.getElementsByClassName("answer-btn");
@@ -326,14 +351,14 @@ function loadQuestion() {
 
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].textContent = question.answers[i];
-        answerButtons[i].style.backgroundColor = ""; // Reset button background colors
-        answerButtons[i].style.color = "black"; // Ensure text color is black
-        answerButtons[i].style.borderColor = "black"; // Ensure border color is black
-        answerButtons[i].disabled = false; // Enable buttons
+        answerButtons[i].style.backgroundColor = ""; // Réinitialise les couleurs de fond des boutons
+        answerButtons[i].style.color = "black"; // Assure que la couleur du texte est noire
+        answerButtons[i].style.borderColor = "black"; // Assure que la couleur de la bordure est noire
+        answerButtons[i].disabled = false; // Active les boutons
     }
 
     document.getElementById("result-container").textContent = "";
-    document.getElementById("description").textContent = ""; // Clear description
+    document.getElementById("description").textContent = ""; // Efface la description
 }
 
 function checkAnswer(selected) {
@@ -355,6 +380,7 @@ function checkAnswer(selected) {
     if (selected === question.correct) {
         resultContainer.textContent = "Good answer, keep going :)";
         resultContainer.style.color = "#00cf22";
+        score++; // Increment score
     } else {
         resultContainer.textContent = "Wrong answer, try again :(";
         resultContainer.style.color = "red";
@@ -362,6 +388,9 @@ function checkAnswer(selected) {
 
     // Display the description
     document.getElementById("description").textContent = question.description;
+
+    // Update the score display
+    document.getElementById("score-container").textContent = `Score: ${score}`;
 
     setTimeout(() => {
         currentQuestion = (currentQuestion + 1) % quizData.length;
